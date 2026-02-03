@@ -154,37 +154,37 @@ export default function Home({ auth }) {
                 title: "Cuisines Sur Mesure",
                 desc: "Conception ergonomique, matériaux résistants à l'humidité, intégration d'appareils high-tech. Styles : moderne, rustique, minimaliste.",
                 icon: "🍳",
-                img: "https://images.unsplash.com/photo-1556911220-e15b28c11b13?auto=format&fit=crop&w=800"
+                img: "1.jpeg"
               },
               {
                 title: "Portes & Fenêtres",
                 desc: "Isolation thermique et phonique, designs sécurisés, finitions anti-UV. Options : bois massif, vitrage double.",
                 icon: "🚪",
-                img: "https://images.unsplash.com/photo-1560512823-8298853c8e24?auto=format&fit=crop&w=800"
+                img: "2.jpeg"
               },
               {
                 title: "Escaliers & Balustrades",
                 desc: "Structures solides, designs personnalisés (hélicoïdal, flottant). Matériaux : bois, métal, verre.",
                 icon: "🪜",
-                img: "https://images.unsplash.com/photo-1562778612-e1e8010a8a4e?auto=format&fit=crop&w=800"
+                img: "./3.jpeg"
               },
               {
                 title: "Meubles Personnalisés",
                 desc: "Armoires, lits, tables en bois précieux. Finitions : vernis mat, huilé ou laqué.",
                 icon: "🛋️",
-                img: "https://images.unsplash.com/photo-1583847268964-b28e0220df22?auto=format&fit=crop&w=800"
+                img: "./4.jpeg"
               },
               {
                 title: "Agencements Intérieurs",
                 desc: "Bibliothèques, dressings, bureaux intégrés. Optimisation d'espace pour petits et grands volumes.",
                 icon: "🏠",
-                img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800"
+                img: "./5.jpeg"
               },
               {
                 title: "Rénovation Bois",
                 desc: "Restauration de parquets anciens, ponçage, vitrification. Expertise en patrimoine.",
                 icon: "🔨",
-                img: "https://images.unsplash.com/photo-1505798577917-a65157d3320b?auto=format&fit=crop&w=800"
+                img: "./3.jpeg"
               },
             ].map((service, i) => (
               <motion.div
@@ -248,7 +248,7 @@ export default function Home({ auth }) {
             {Array(6).fill(0).map((_, i) => (
               <motion.div key={i} variants={fadeIn} className="relative rounded-3xl overflow-hidden shadow-2xl group">
                 <img
-                  src={`https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&${i}`}
+                  src='./cuisine.jpeg'
                   alt={`Réalisation ${i + 1}`}
                   className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -324,7 +324,7 @@ export default function Home({ auth }) {
       </section>
 
       {/* Section Blog / Actualités */}
-      <section className="py-24 md:py-32 bg-black">
+      {/* <section className="py-24 md:py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -379,7 +379,7 @@ export default function Home({ auth }) {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section CTA Final */}
       <section className="py-24 md:py-32 bg-gradient-to-r from-green-950 to-green-900 text-white">
