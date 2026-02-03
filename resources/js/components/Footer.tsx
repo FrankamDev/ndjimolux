@@ -230,6 +230,16 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        <div className="flex justify-center mt-10">
+          <Link
+            prefetch
+            href="/admin"
+            className="px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Se connecter en tant qu'Admin
+          </Link>
+        </div>
+
       </div>
     </footer>
   );

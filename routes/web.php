@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
@@ -9,6 +10,11 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
+
+
+Route::get('/blog/{slug}', [BlogController::class, 'show'])
+  ->name('blog.show');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/devis', [DevisController::class, 'index'])
   ->name('devis.index');
 Route::get('/realisations', [RealisationsController::class, 'index'])

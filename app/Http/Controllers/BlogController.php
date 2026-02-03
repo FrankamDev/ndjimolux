@@ -2,63 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Post;
+use Inertia\Inertia;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+  public function index()
+  {
+    $posts = Post::whereNotNull('published_at')
+      ->where('published_at', '<=', now())
+      ->latest('published_at')
+      ->get();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+    return Inertia::render('Blog/BlogIndex', [
+      'posts' => $posts,
+    ]);
+  }
+  public function show($slug)
+  {
+    $post = Post::where('slug', $slug)
+      ->whereNotNull('published_at')
+      ->firstOrFail();
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    return Inertia::render('Blog/BlogShow', [
+      'post' => $post,
+    ]);
+  }
 }
