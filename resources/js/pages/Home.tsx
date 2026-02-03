@@ -83,7 +83,7 @@ export default function Home({ auth }) {
       </section>
 
       {/* Section À Propos */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-black to-gray-900">
+      {/* <section className="py-24 md:py-32 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -122,7 +122,7 @@ export default function Home({ auth }) {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section Services Détaillée */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-green-950 to-black">

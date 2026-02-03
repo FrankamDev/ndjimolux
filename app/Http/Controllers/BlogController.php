@@ -12,12 +12,20 @@ class BlogController extends Controller
     $posts = Post::whereNotNull('published_at')
       ->where('published_at', '<=', now())
       ->latest('published_at')
-      ->get();
+      ->get()
+      ->map(fn($post) => [
+        'id' => $post->id,
+        'title' => $post->title,
+        'slug' => $post->slug,
+        'excerpt' => $post->excerpt,
+        'image' => $post->image_url, // ← important !
+        'category' => $post->category,
+        'published_at' => $post->published_at,
+      ]);
 
-    return Inertia::render('Blog/BlogIndex', [
-      'posts' => $posts,
-    ]);
+    return Inertia::render('Blog/BlogIndex', ['posts' => $posts]);
   }
+
   public function show($slug)
   {
     $post = Post::where('slug', $slug)
@@ -25,7 +33,16 @@ class BlogController extends Controller
       ->firstOrFail();
 
     return Inertia::render('Blog/BlogShow', [
-      'post' => $post,
+      'post' => [
+        'id' => $post->id,
+        'title' => $post->title,
+        'slug' => $post->slug,
+        'excerpt' => $post->excerpt,
+        'content' => $post->content,
+        'image' => $post->image_url, // ← important !
+        'category' => $post->category,
+        'published_at' => $post->published_at,
+      ]
     ]);
   }
 }

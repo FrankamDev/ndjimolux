@@ -1,5 +1,6 @@
 import { Head, Link } from "@inertiajs/react";
 import "./blog.css";
+import NavBar from "@/components/NavBar";
 interface Post {
   id: number;
   title: string;
@@ -14,17 +15,28 @@ export default function BlogShow({ post }: { post: Post }) {
   return (
     <>
       <Head title={post.title} />
-
+      <NavBar />
       <div className="min-h-screen bg-black text-white">
 
         {/* Hero Image */}
         {post.image && (
           <div className="w-full h-[400px] relative">
-            <img
+            {/* <img
               src={`/storage/${post.image}`}
               alt={post.title}
               className="w-full h-full object-cover opacity-60"
-            />
+            /> */}
+
+            {post.image && (
+              <div className="w-full h-[400px] relative">
+                <img
+                  src={post.image} // post.image = "blog-content/nom-image.jpg"
+                  alt={post.title}
+                  className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+              </div>
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
           </div>
         )}

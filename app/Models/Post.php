@@ -33,7 +33,12 @@ class Post extends Model
   {
     return $this->belongsTo(User::class);
   }
-
+  public function getImageUrlAttribute()
+  {
+    return $this->image
+      ? route('blog.image', basename($this->image))
+      : null;
+  }
   protected static function booted()
   {
     static::creating(function ($post) {

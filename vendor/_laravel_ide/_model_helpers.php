@@ -19,6 +19,7 @@ namespace App\Models {
    * @property string $slug
    * @property string $title
    * @property int $id
+   * @property-read mixed $image_url
    * @property-read \App\Models\User $user
    * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereId($value)
    * @method static \Illuminate\Database\Eloquent\Builder<Post>|Post whereTitle($value)

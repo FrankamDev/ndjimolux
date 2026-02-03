@@ -23,7 +23,7 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
           {/* Header */}
           <div className="mb-14 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Notre Blog
+              Blog de Njimoluxe
             </h1>
             <div className="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                   {post.image && (
                     <div className="overflow-hidden">
                       <img
-                        src={`/storage/${post.image}`}
+                        src={post.image || '/default-image.jpg'}
                         alt={post.title}
                         className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500"
                       />
