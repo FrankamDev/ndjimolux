@@ -1,13 +1,12 @@
 import { Head, Link } from '@inertiajs/react';
 import { motion, AnimatePresence } from 'framer-motion'; // Assure-toi d'installer framer-motion: npm install framer-motion
 import { useState } from 'react';
+import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
 
-// Configuration Tailwind : Ajoute ces polices dans tailwind.config.js
-// fonts: { sans: ['Montserrat', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
-// Et étends les thèmes avec des animations personnalisées si besoin
 
 export default function Home({ auth }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   // Variants pour animations Framer Motion
   const fadeIn = {
@@ -25,98 +24,7 @@ export default function Home({ auth }) {
       <meta name="description" content="Ndjimolux : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
 
       {/* Header / Navbar avec transition douce */}
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/95 to-black/80 backdrop-blur-lg border-b border-green-900/20 shadow-lg"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo avec hover scale */}
-            <Link href="/" className="flex items-center space-x-3">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="w-12 h-12 bg-gradient-to-br from-green-800 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-md"
-              >
-                N
-              </motion.div>
-              <span className="text-3xl font-serif font-bold text-white tracking-wide">NDJIMOLUX</span>
-            </Link>
-
-            {/* Navigation desktop */}
-            <nav className="hidden md:flex items-center space-x-10">
-              {['Accueil', 'Services', 'Réalisations', 'À Propos', 'Blog', 'Contact'].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase().replace('à ', 'a-').replace(' ', '-')}`}
-                  className="text-gray-200 hover:text-green-400 transition-colors duration-300 font-sans font-medium text-lg"
-                >
-                  {item}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Bouton CTA + Menu mobile */}
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/devis"
-                className="hidden md:inline-flex items-center px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Devis Gratuit
-              </Link>
-
-              {/* Hamburger avec animation */}
-              <button
-                className="md:hidden text-white p-2 rounded-full hover:bg-green-900/30 transition-colors"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Menu mobile avec AnimatePresence */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.4 }}
-              className="md:hidden bg-black border-t border-green-900/30 overflow-hidden"
-            >
-              <div className="px-4 py-6 space-y-5">
-                {['Accueil', 'Services', 'Réalisations', 'À Propos', 'Blog', 'Contact'].map((item) => (
-                  <Link
-                    key={item}
-                    href={`/${item.toLowerCase().replace('à ', 'a-').replace(' ', '-')}`}
-                    className="block text-xl text-gray-200 hover:text-green-400 transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item}
-                  </Link>
-                ))}
-                <Link
-                  href="/devis"
-                  className="block w-full text-center py-4 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-full mt-4 shadow-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Devis Gratuit
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.header>
+      <NavBar />
 
       {/* Hero Section avec parallax-like et animations */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-black to-green-950 pt-20 overflow-hidden">
@@ -195,7 +103,7 @@ export default function Home({ auth }) {
                 Notre équipe d'artisans qualifiés sélectionne les meilleurs bois locaux et importés (acajou, teck, chêne) pour des finitions impeccables. Engagement écologique : bois certifiés FSC.
               </p>
               <Link
-                href="/a-propos"
+                href="/about"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-green-600 text-green-400 hover:bg-green-700 hover:text-white font-sans font-semibold rounded-full transition-all duration-300"
               >
                 En Savoir Plus →
@@ -504,41 +412,13 @@ export default function Home({ auth }) {
       </section>
 
       {/* Footer Étendu */}
-      <footer className="bg-black border-t border-green-900/30 py-16 text-gray-400">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-4 gap-12">
-          <div>
-            <h3 className="text-2xl font-serif text-white mb-4">NDJIMOLUX</h3>
-            <p className="font-sans">Menuiserie d'excellence au Cameroun depuis 2020.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-serif text-white mb-4">Navigation</h3>
-            <ul className="space-y-2 font-sans">
-              <li><Link href="/" className="hover:text-green-400 transition-colors">Accueil</Link></li>
-              <li><Link href="/services" className="hover:text-green-400 transition-colors">Services</Link></li>
-              <li><Link href="/realisations" className="hover:text-green-400 transition-colors">Réalisations</Link></li>
-              <li><Link href="/blog" className="hover:text-green-400 transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="hover:text-green-400 transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-serif text-white mb-4">Contact</h3>
-            <p className="font-sans">Téléphone : +237 6XX XX XX XX</p>
-            <p className="font-sans">Email : info@ndjimolux.cm</p>
-            <p className="font-sans">Adresse :  Yaoundé, Cameroun</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-serif text-white mb-4">Suivez-Nous</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-2xl hover:text-green-400 transition-colors">📘</a>
-              <a href="#" className="text-2xl hover:text-green-400 transition-colors">🐦</a>
-              <a href="#" className="text-2xl hover:text-green-400 transition-colors">📸</a>
-            </div>
-          </div>
-        </div>
-        <div className="mt-12 text-center border-t border-green-900/30 pt-8 font-sans text-sm">
-          © {new Date().getFullYear()} NDJIMOLUX. Tous droits réservés. | Politique de Confidentialité
-        </div>
-      </footer>
+      <div className="min-h-screen flex flex-col bg-black text-white">
+        {/* Header */}
+        {/* Contenu principal */}
+
+        {/* Footer */}
+        <Footer />
+      </div>
     </>
   );
 }
