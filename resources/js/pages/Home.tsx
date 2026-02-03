@@ -21,8 +21,8 @@ export default function Home({ auth }) {
 
   return (
     <>
-      <Head title="Ndjimolux - Menuiserie d'Excellence à Douala" />
-      <meta name="description" content="Ndjimolux : Spécialiste en menuiserie sur mesure à Douala. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
+      <Head title="Ndjimolux - Menuiserie d'Excellence à Yaoundé" />
+      <meta name="description" content="Ndjimolux : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
 
       {/* Header / Navbar avec transition douce */}
       <motion.header
@@ -137,7 +137,7 @@ export default function Home({ auth }) {
                 <span className="block text-green-500 mt-4">Artisanat du Bois</span>
               </h1>
               <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans max-w-2xl leading-relaxed">
-                À Douala, nous sculptons l'excellence en menuiserie sur mesure : meubles intemporels, cuisines ergonomiques, portes robustes et escaliers élégants en bois nobles.
+                Au cameroun, nous sculptons l'excellence en menuiserie sur mesure : meubles intemporels, cuisines ergonomiques, portes robustes et escaliers élégants en bois nobles.
               </p>
               <div className="mt-12 flex flex-col sm:flex-row gap-6">
                 <Link
@@ -347,7 +347,7 @@ export default function Home({ auth }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                   <div>
                     <h3 className="text-2xl font-serif text-white mb-2">Projet Luxe</h3>
-                    <p className="text-gray-300 font-sans">Cuisine moderne en teck, Douala 2023</p>
+                    <p className="text-gray-300 font-sans">Cuisine moderne en teck, Cameroun 2023</p>
                   </div>
                 </div>
               </motion.div>
@@ -508,7 +508,7 @@ export default function Home({ auth }) {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-4 gap-12">
           <div>
             <h3 className="text-2xl font-serif text-white mb-4">NDJIMOLUX</h3>
-            <p className="font-sans">Menuiserie d'excellence à Douala depuis 2010.</p>
+            <p className="font-sans">Menuiserie d'excellence au Cameroun depuis 2020.</p>
           </div>
           <div>
             <h3 className="text-xl font-serif text-white mb-4">Navigation</h3>
@@ -524,7 +524,7 @@ export default function Home({ auth }) {
             <h3 className="text-xl font-serif text-white mb-4">Contact</h3>
             <p className="font-sans">Téléphone : +237 6XX XX XX XX</p>
             <p className="font-sans">Email : info@ndjimolux.cm</p>
-            <p className="font-sans">Adresse : Rue XYZ, Douala, Cameroun</p>
+            <p className="font-sans">Adresse :  Yaoundé, Cameroun</p>
           </div>
           <div>
             <h3 className="text-xl font-serif text-white mb-4">Suivez-Nous</h3>
