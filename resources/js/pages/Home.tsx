@@ -324,6 +324,8 @@ export default function Home({ auth }) {
       </section>
 
       {/* Section Blog / Actualités */}
+
+
       {/* <section className="py-24 md:py-32 bg-black">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
