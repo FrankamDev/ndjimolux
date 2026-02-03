@@ -43,9 +43,10 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
 
                   {/* Image */}
                   {post.image && (
+
                     <div className="overflow-hidden">
                       <img
-                        src={post.image || '/default-image.jpg'}
+                        src={`/storage/${post.image}`}
                         alt={post.title}
                         className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500"
                       />

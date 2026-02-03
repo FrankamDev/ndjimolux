@@ -30,7 +30,7 @@ export default function BlogShow({ post }: { post: Post }) {
             {post.image && (
               <div className="w-full h-[400px] relative">
                 <img
-                  src={post.image} // post.image = "blog-content/nom-image.jpg"
+                  src={`/storage/${post.image}`} // post.image = "blog-content/nom-image.jpg"
                   alt={post.title}
                   className="w-full h-full object-cover opacity-60"
                 />
