@@ -189,7 +189,7 @@ export default function Home({ auth }) {
                 À Propos de <span className="text-green-500">Ndjimolux</span>
               </h2>
               <p className="text-lg text-gray-300 font-sans leading-relaxed mb-6">
-                Fondée en 2010 à Douala, Ndjimolux est une entreprise familiale passionnée par le bois. Nous combinons savoir-faire traditionnel et technologies modernes pour créer des pièces uniques qui durent des générations.
+                Fondée au cameroun, Ndjimolux est une entreprise familiale passionnée par le bois. Nous combinons savoir-faire traditionnel et technologies modernes pour créer des pièces uniques qui durent des générations.
               </p>
               <p className="text-lg text-gray-300 font-sans leading-relaxed mb-6">
                 Notre équipe d'artisans qualifiés sélectionne les meilleurs bois locaux et importés (acajou, teck, chêne) pour des finitions impeccables. Engagement écologique : bois certifiés FSC.
