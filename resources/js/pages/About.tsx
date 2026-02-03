@@ -86,7 +86,7 @@ export default function About() {
               className="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/30"
             >
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80"
+                src="./4.jpeg"
                 alt="Atelier Ndjimolux – artisans au travail"
                 className="w-full h-auto object-cover aspect-[4/3] md:aspect-[5/4]"
               />
