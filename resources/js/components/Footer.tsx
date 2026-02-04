@@ -23,7 +23,7 @@ export default function Footer() {
               <div className="w-11 h-11 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md">
                 <img src="./njimoluxe.png" className='' alt="" />
               </div>
-              <img src="./njimoluxe.png" className='' alt="" />
+
               <span className="text-2xl font-serif font-extrabold text-green-400 tracking-tight">
                 NJIMOLUXE
               </span>
