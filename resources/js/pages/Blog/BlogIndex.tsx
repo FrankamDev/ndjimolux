@@ -50,10 +50,6 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                         alt={post.title}
                         className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500"
                       />
-                      {/* <img
-                        src={post.image ? `/storage/${post.image}` : '/default.png'}
-                        alt={post.title}
-                      /> */}
 
                     </div>
                   )}

@@ -160,7 +160,6 @@
 
 .rich-content ul li::before {
   content: "→";
-  /* content: '->'; */
   color: var(--color-accent);
   position: absolute;
   left: 0;

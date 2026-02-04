@@ -16,7 +16,7 @@ class BlogController extends Controller
         'title' => $post->title,
         'slug' => $post->slug,
         'excerpt' => $post->excerpt,
-        'image' => $post->image_url,
+        'image' => $post->image,
         'category' => $post->category,
         'published_at' => $post->published_at,
       ]);
@@ -35,7 +35,7 @@ class BlogController extends Controller
         'slug' => $post->slug,
         'excerpt' => $post->excerpt,
         'content' => $post->content,
-        'image' => $post->image_url,
+        'image' => $post->image,
         'category' => $post->category,
         'published_at' => $post->published_at,
       ]

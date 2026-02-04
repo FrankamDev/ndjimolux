@@ -12,14 +12,8 @@ use Laravel\Fortify\Features;
 use Illuminate\Support\Facades\Storage;
 
 
-Route::get('/blog-image/{filename}', function ($filename) {
-  // Vérifie que le fichier existe
-  if (!Storage::disk('private')->exists('blog/' . $filename)) {
-    abort(404);
-  }
-
-  // Retourne le fichier
-  return response()->file(Storage::disk('private')->path('blog/' . $filename));
+Route::get('/blog/image/{filename}', function ($filename) {
+  return response()->file(storage_path('app/public/blog/' . $filename));
 })->name('blog.image');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])
   ->name('blog.show');
