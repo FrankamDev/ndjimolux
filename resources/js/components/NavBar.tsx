@@ -1,6 +1,6 @@
 import { Link } from '@inertiajs/react';
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
   { name: 'Accueil', href: '/' },
@@ -39,14 +39,15 @@ const NavBar = () => {
           <Link prefetch href="/" className="flex items-center space-x-3">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
-              className="w-14 h-12 bg-gradient-to-br from-green-800 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-md"
+              className="w-14 h-12 bg-gradient-to-br from-green-800 to-green-600 rounded-[7px] flex items-center justify-center text-white font-bold text-2xl shadow-md"
             >
-              <img src="./njimoluxe.png" className='rounded-full h-full' alt="Logo" />
+              <img src="./njimoluxe.png" className='rounded-[7px] h-full' alt="Logo" />
             </motion.div>
-            <span className="text-3xl font-serif font-bold text-white tracking-wide">NJIMOLUX</span>
+            <span className="text-3xl font-serif font-bold text-green-400 tracking-wide">NJIMOLUXE</span>
           </Link>
 
-          {/* Navigation desktop */}
+
+
           <nav className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <Link
@@ -64,13 +65,13 @@ const NavBar = () => {
             <Link
               prefetch
               href="/contact"
-              className="hidden md:inline-flex items-center px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="hidden md:inline-flex items-center px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-[7px] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Devis Gratuit
             </Link>
 
             <button
-              className="md:hidden text-white p-2 rounded-full hover:bg-green-900/30 transition-colors"
+              className="md:hidden text-white p-2 rounded-[7px] hover:bg-green-900/30 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +110,7 @@ const NavBar = () => {
               ))}
               <Link
                 href="/devis"
-                className="block w-full text-center py-4 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-full mt-4 shadow-md"
+                className="block w-full text-center py-4 bg-green-700 hover:bg-green-600 text-white font-sans font-semibold rounded-[7px] mt-4 shadow-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Devis Gratuit

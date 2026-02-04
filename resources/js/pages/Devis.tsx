@@ -3,6 +3,7 @@ import { Head, Link, useForm } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import type { FormEvent } from 'react';
 import { useState } from 'react';
+import NavBar from '@/components/NavBar';
 
 export default function Devis() {
   const { data, setData, post, processing, errors, reset } = useForm({
@@ -45,6 +46,7 @@ export default function Devis() {
       <Head title="Demander un Devis – Ndjimolux Menuiserie sur Mesure à Douala" />
 
       {/* Hero */}
+      <NavBar />
       <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-gray-950 via-black to-emerald-950/80 pt-20 md:pt-28 overflow-hidden">
         <div className="absolute inset-0 opacity-15 bg-[url('/images/wood-atelier-premium.jpg')] bg-cover bg-center mix-blend-overlay pointer-events-none" />
 

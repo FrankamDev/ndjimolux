@@ -18,12 +18,16 @@ export default function Footer() {
           {/* Colonne 1 – Logo & courte description */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
             <Link href="/" className="flex items-center gap-3 mb-6">
+
+
               <div className="w-11 h-11 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md">
-                N
+                <img src="./njimoluxe.png" className='' alt="" />
               </div>
-              <span className="text-2xl font-serif font-extrabold text-white tracking-tight">
-                NDJIMOLUX
+              <img src="./njimoluxe.png" className='' alt="" />
+              <span className="text-2xl font-serif font-extrabold text-green-400 tracking-tight">
+                NJIMOLUXE
               </span>
+
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-6">
@@ -31,35 +35,6 @@ export default function Footer() {
               Création sur mesure, finitions soignées, bois nobles et engagement qualité depuis 2010.
             </p>
 
-            {/* <div className="flex gap-5 text-2xl">
-              <a
-                href="https://facebook.com/ndjimolux"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-emerald-400 transition-colors"
-                aria-label="Facebook"
-              >
-                📘
-              </a>
-              <a
-                href="https://instagram.com/ndjimolux"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-emerald-400 transition-colors"
-                aria-label="Instagram"
-              >
-                📸
-              </a>
-              <a
-                href="https://wa.me/23769XXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-emerald-400 transition-colors"
-                aria-label="WhatsApp"
-              >
-                💬
-              </a>
-            </div> */}
             <Icons links={{
               whatsapp: "https://wa.me/237695748384",
               facebook: "https://facebook.com/njimoluxe",
@@ -164,7 +139,7 @@ export default function Footer() {
                     href="tel:+237695748384"
                     className="hover:text-emerald-400 transition-colors"
                   >
-                    +237695748384
+                    +237 695 74 83 84
                   </a>
                   <p className="text-sm text-gray-500 mt-0.5">Lun–Ven 8h–17h | Sam 9h–14h</p>
                 </div>
@@ -210,16 +185,18 @@ export default function Footer() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div >
 
       {/* Bottom bar */}
-      <div className="border-t border-emerald-900/30 bg-black/70 py-6 text-center text-sm text-gray-500">
+      < div className="border-t border-emerald-900/30 bg-black/70 py-6 text-center text-sm text-gray-500" >
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <p>
             © {new Date().getFullYear()} NJIMOLUXE – Tous droits réservés
           </p>
           <div className="mt-2 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 text-xs md:text-sm">
-            <Link href="/mentions-legales" className="hover:text-emerald-400 transition-colors">
+            <Link
+              prefetch
+              href="/mentions-legales" className="hover:text-emerald-400 transition-colors">
               Mentions légales
             </Link>
             <Link href="/politique-confidentialite" className="hover:text-emerald-400 transition-colors">
@@ -240,7 +217,7 @@ export default function Footer() {
           </Link>
         </div>
 
-      </div>
-    </footer>
+      </ div>
+    </footer >
   );
 }

@@ -20,8 +20,8 @@ export default function Home({ auth }) {
 
   return (
     <>
-      <Head title="Ndjimolux - Menuiserie d'Excellence à Yaoundé" />
-      <meta name="description" content="Ndjimolux : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
+      <Head title="Ndjimoluxe - Menuiserie d'Excellence à Yaoundé" />
+      <meta name="description" content="Ndjimoluxe : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
 
       {/* Header / Navbar avec transition douce */}
       <NavBar />
@@ -40,23 +40,24 @@ export default function Home({ auth }) {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <motion.div variants={fadeIn}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-extrabold text-white leading-none tracking-tight">
-                NDJIMOLUX
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-extrabold text-green-400 leading-none tracking-tight">
+                NJIMOLUXE
                 <span className="block text-green-500 mt-4">Artisanat du Bois</span>
               </h1>
               <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans max-w-2xl leading-relaxed">
                 Au cameroun, nous sculptons l'excellence en menuiserie sur mesure : meubles intemporels, cuisines ergonomiques, portes robustes et escaliers élégants en bois nobles.
               </p>
-              <div className="mt-12 flex flex-col sm:flex-row gap-6">
+              <div className="md:mt-4 flex flex-col sm:flex-row gap-6">
                 <Link
+                  prefetch
                   href="/devis"
-                  className="inline-flex items-center justify-center px-10 py-5 bg-green-700 hover:bg-green-600 text-white text-lg font-sans font-bold rounded-full transition-all duration-500 shadow-2xl hover:shadow-green-700/50 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-10 py-5 bg-green-700 hover:bg-green-600 text-white text-lg font-sans font-bold rounded-[7px] transition-all duration-500 shadow-2xl hover:shadow-green-700/50 transform hover:scale-105"
                 >
                   Devis Gratuit
                 </Link>
                 <Link
                   href="/realisations"
-                  className="inline-flex items-center justify-center px-10 py-5 border-2 border-green-600 text-green-400 hover:bg-green-900/40 hover:text-green-300 text-lg font-sans font-bold rounded-full transition-all duration-500"
+                  className="inline-flex items-center justify-center px-10 py-5 border-2 border-green-600 text-green-400 hover:bg-green-900/40 hover:text-green-300 text-lg font-sans font-bold rounded-[7px] transition-all duration-500"
                 >
                   Nos Réalisations
                 </Link>
@@ -66,7 +67,7 @@ export default function Home({ auth }) {
             {/* Image hero avec scale animation */}
             <motion.div
               variants={fadeIn}
-              className="hidden md:block relative rounded-3xl overflow-hidden shadow-2xl border border-green-800/30"
+              className="hidden md:block relative rounded-[7px] overflow-hidden shadow-2xl border border-green-800/30"
             >
               <motion.img
                 initial={{ scale: 1.2 }}
@@ -190,7 +191,7 @@ export default function Home({ auth }) {
               <motion.div
                 key={i}
                 variants={fadeIn}
-                className="group relative bg-gray-900/70 border border-green-900/40 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-green-600/60 transition-all duration-500"
+                className="group relative bg-gray-900/70 border border-green-900/40 rounded-[7px] overflow-hidden shadow-xl hover:shadow-2xl hover:border-green-600/60 transition-all duration-500"
               >
                 <img src={service.img} alt={service.title} className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -212,7 +213,7 @@ export default function Home({ auth }) {
           >
             <Link
               href="/services"
-              className="inline-flex items-center px-10 py-5 bg-green-700 hover:bg-green-600 text-white font-sans font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg"
+              className="inline-flex items-center px-10 py-5 bg-green-700 hover:bg-green-600 text-white font-sans font-bold rounded-[7px] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg"
             >
               Explorer Tous les Services →
             </Link>
@@ -246,7 +247,7 @@ export default function Home({ auth }) {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {Array(6).fill(0).map((_, i) => (
-              <motion.div key={i} variants={fadeIn} className="relative rounded-3xl overflow-hidden shadow-2xl group">
+              <motion.div key={i} variants={fadeIn} className="relative rounded-[7px] overflow-hidden shadow-2xl group">
                 <img
                   src='./cuisine.jpeg'
                   alt={`Réalisation ${i + 1}`}
@@ -271,7 +272,7 @@ export default function Home({ auth }) {
           >
             <Link
               href="/realisations"
-              className="inline-flex items-center px-10 py-5 border-2 border-green-600 text-green-400 hover:bg-green-700 hover:text-white font-sans font-bold rounded-full transition-all duration-300 text-lg"
+              className="inline-flex items-center px-10 py-5 border-2 border-green-600 text-green-400 hover:bg-green-700 hover:text-white font-sans font-bold rounded-[7px] transition-all duration-300 text-lg"
             >
               Voir la Galerie Complète →
             </Link>
@@ -312,7 +313,7 @@ export default function Home({ auth }) {
               <motion.div
                 key={i}
                 variants={fadeIn}
-                className="bg-gray-900/50 border border-green-900/30 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-gray-900/50 border border-green-900/30 rounded-[7px] p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="text-yellow-400 mb-4">{Array(testimonial.rating).fill('★').join(' ')}</div>
                 <p className="text-gray-300 font-sans mb-6 italic">"{testimonial.text}"</p>
@@ -393,7 +394,7 @@ export default function Home({ auth }) {
             variants={fadeIn}
             className="text-4xl md:text-6xl font-serif font-bold mb-8"
           >
-            Transformez Votre Espace Avec Ndjimolux
+            Transformez Votre Espace Avec Njimoluxe
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -406,7 +407,7 @@ export default function Home({ auth }) {
           </motion.p>
           <Link
             href="/devis"
-            className="inline-flex items-center px-12 py-6 bg-white text-green-900 hover:bg-gray-100 font-sans font-bold text-xl rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-green-500/50"
+            className="inline-flex items-center px-12 py-6 bg-white text-green-900 hover:bg-gray-100 font-sans font-bold text-xl rounded-[7px] shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-green-500/50"
           >
             Demander Mon Devis
           </Link>
