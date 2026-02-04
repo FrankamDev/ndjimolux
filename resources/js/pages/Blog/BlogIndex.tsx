@@ -50,6 +50,11 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                         alt={post.title}
                         className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-500"
                       />
+                      {/* <img
+                        src={post.image ? `/storage/${post.image}` : '/default.png'}
+                        alt={post.title}
+                      /> */}
+
                     </div>
                   )}
 
@@ -68,8 +73,6 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                     <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                       {(post.excerpt ?? post.content ?? "").substring(0, 120) + "..."}
                     </p>
-
-
                     <div className="flex justify-between items-center text-xs text-gray-500">
                       <span>{post.published_at}</span>
                       <span className="text-green-400 font-semibold group-hover:underline">

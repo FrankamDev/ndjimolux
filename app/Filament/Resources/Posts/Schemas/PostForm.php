@@ -42,9 +42,13 @@ class PostForm
 
         FileUpload::make('image')
           ->image()
+          ->label('Image de l’article')
           ->directory('blog')
+          ->visibility('public')
           ->imageEditor()
+          ->disk('public')
           ->maxSize(5120),
+
 
         Select::make('category')
           ->options([
