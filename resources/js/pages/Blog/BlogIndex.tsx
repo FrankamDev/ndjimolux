@@ -66,10 +66,9 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                     </h2>
 
                     <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                      {post.excerpt ??
-                        post.content.substring(0, 120) +
-                        "..."}
+                      {(post.excerpt ?? post.content ?? "").substring(0, 120) + "..."}
                     </p>
+
 
                     <div className="flex justify-between items-center text-xs text-gray-500">
                       <span>{post.published_at}</span>

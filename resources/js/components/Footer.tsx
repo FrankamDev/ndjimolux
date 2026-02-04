@@ -20,6 +20,9 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-6">
 
 
+
+
+
               <div className="w-11 h-11 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md">
                 <img src="./njimoluxe.png" className='' alt="" />
               </div>
