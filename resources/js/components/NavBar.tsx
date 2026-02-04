@@ -35,11 +35,11 @@ const NavBar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo avec hover scale */}
+
           <Link prefetch href="/" className="flex items-center space-x-3">
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
-              className="w-14 h-12 bg-gradient-to-br from-green-800 to-green-600 rounded-[7px] flex items-center justify-center text-white font-bold text-2xl shadow-md"
+              className="w-14 h-12  rounded-[7px] flex items-center justify-center text-white font-bold text-2xl shadow-md"
             >
               <img src="./njimoluxe.png" className='rounded-[7px] h-full' alt="Logo" />
             </motion.div>

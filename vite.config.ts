@@ -35,11 +35,26 @@ import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/resources/js'
+    }
+  },
+  server: {
+    host: 'localhost',
+    port: 8000
+  },
+  build:{
+    outDir: 'public/build',
+    minify: 'esbuild'
+  },
+
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             ssr: 'resources/js/ssr.tsx',
             refresh: true,
+            
         }),
         react({
             babel: {
@@ -47,7 +62,7 @@ export default defineConfig({
             },
         }),
         tailwindcss({
-            config: './tailwind.config.js', // Assure que ton config inclut typography plugin et prose-rich
+            config: './tailwind.config.js',
         }),
         wayfinder({
             formVariants: true,

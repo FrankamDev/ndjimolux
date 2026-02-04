@@ -24,6 +24,7 @@
         "eslint-plugin-react-hooks": "^7.0.0",
         "prettier": "^3.4.2",
         "prettier-plugin-tailwindcss": "^0.6.11",
+        "sass-embedded": "^1.97.3",
         "typescript-eslint": "^8.23.0"
     },
     "dependencies": {
@@ -53,6 +54,7 @@
         "globals": "^15.14.0",
         "input-otp": "^1.4.2",
         "laravel-vite-plugin": "^2.0",
+        "lightgallery": "^2.9.0",
         "lucide-react": "^0.475.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
