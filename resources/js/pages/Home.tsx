@@ -20,8 +20,8 @@ export default function Home({ auth }) {
 
   return (
     <>
-      <Head title="Ndjimoluxe - Menuiserie d'Excellence à Yaoundé" />
-      <meta name="description" content="Ndjimoluxe : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
+      <Head title="Njimoluxe - Menuiserie d'Excellence à Yaoundé" />
+      <meta name="description" content="Njimoluxe : Spécialiste en menuiserie sur mesure à Yaoundé. Meubles, cuisines, portes, escaliers en bois noble. Qualité artisanale et finitions impeccables." />
 
       {/* Header / Navbar avec transition douce */}
       <NavBar />
@@ -74,7 +74,7 @@ export default function Home({ auth }) {
                 animate={{ scale: 1 }}
                 transition={{ duration: 1.5, ease: 'easeOut' }}
                 src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
-                alt="Menuiserie Ndjimolux"
+                alt="Menuiserie Njimolux"
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -308,7 +308,7 @@ export default function Home({ auth }) {
             {[
               { name: "Marie T.", text: "Travail impeccable sur notre cuisine. Délais respectés et finitions parfaites !", rating: 5 },
               { name: "Jean-Paul K.", text: "Escalier sur mesure qui a transformé notre maison. Équipe professionnelle et à l'écoute.", rating: 5 },
-              { name: "Sophie M.", text: "Meubles de qualité supérieure. Je recommande Ndjimolux sans hésiter.", rating: 5 },
+              { name: "Sophie M.", text: "Meubles de qualité supérieure. Je recommande Njimolux sans hésiter.", rating: 5 },
             ].map((testimonial, i) => (
               <motion.div
                 key={i}

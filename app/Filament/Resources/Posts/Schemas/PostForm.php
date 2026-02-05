@@ -43,7 +43,7 @@ class PostForm
         FileUpload::make('image')
           ->image()
           ->label('Image de l’article')
-          ->directory('blog')
+          ->directory('public')
           ->visibility('public')
           ->imageEditor()
           ->disk('public')

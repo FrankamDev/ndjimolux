@@ -13,6 +13,8 @@ interface Post {
 }
 
 export default function BlogIndex({ posts }: { posts: Post[] }) {
+
+
   return (
     <>
       <Head title="Blog" />
@@ -39,12 +41,15 @@ export default function BlogIndex({ posts }: { posts: Post[] }) {
                 href={`/blog/${post.slug}`}
                 className="group"
               >
+
                 <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden transition duration-300 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]">
 
                   {/* Image */}
                   {post.image && (
 
                     <div className="overflow-hidden">
+
+
                       <img
                         src={`/storage/${post.image}`}
                         alt={post.title}
