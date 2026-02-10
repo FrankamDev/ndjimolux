@@ -22,7 +22,17 @@ Route::get('/devis', [DevisController::class, 'index'])
   ->name('devis.index');
 Route::get('/realisations', [RealisationsController::class, 'index'])
   ->name('realisation.index');
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::post('/devis', [DevisController::class, 'store'])->name('devis.store');
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('/comments', [App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
+    Route::delete('/comments/{comment}', [App\Http\Controllers\CommentController::class, 'destroy'])->name('comments.destroy');
+    Route::post('/comments/{comment}/like', [App\Http\Controllers\CommentController::class, 'toggleLike'])->name('comments.like');
+});
+
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('dashboard', function () {

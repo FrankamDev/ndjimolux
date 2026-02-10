@@ -10,10 +10,14 @@ class RealisationsController extends Controller
   /**
    * Display a listing of the resource.
    */
-  public function index()
-  {
-    return Inertia::render("Realisations");
-  }
+    public function index()
+    {
+        $realisations = \App\Models\Realisation::latest('id')->get();
+
+        return Inertia::render("Realisations", [
+            'realisations' => \App\Http\Resources\RealisationResource::collection($realisations),
+        ]);
+    }
 
   /**
    * Show the form for creating a new resource.
