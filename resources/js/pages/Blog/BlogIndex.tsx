@@ -70,7 +70,7 @@ export default function BlogIndex({ posts }: { posts: Pagination<Post> }) {
           </div>
 
           {/* Pagination */}
-          {posts.meta.links.length > 3 && (
+          {posts?.meta?.links && posts.meta.links.length > 3 && (
             <div className="mt-16 flex justify-center space-x-2">
               {posts.meta.links.map((link, key) => (
                 link.url ? (
