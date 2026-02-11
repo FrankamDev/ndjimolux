@@ -1,4 +1,4 @@
-
+import '../../pages/Blog/blog.css';
 interface User {
   id: number;
   name: string;
@@ -32,6 +32,8 @@ export default function CommentItem({ comment, postId }: { comment: Comment, pos
   const submitReply = (e: React.FormEvent) => {
     e.preventDefault();
     post('/comments', {
+      preserveScroll: true,
+      preserveState: true,
       onSuccess: () => {
         reset();
         setShowReply(false);
