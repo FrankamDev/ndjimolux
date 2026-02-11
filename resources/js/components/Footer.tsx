@@ -14,6 +14,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-b from-black to-gray-950 border-t border-emerald-900/30 text-gray-300">
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-16 pb-12">
+        <h1>Je ne sais pas</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
           {/* Colonne 1 – Logo & courte description */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
