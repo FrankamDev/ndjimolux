@@ -20,12 +20,14 @@ export default function Footer() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
             <Link href="/" className="flex items-center gap-3 mb-6">
 
-
-
-
-
-              <div className="w-11 h-11 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md">
-                <img src="./njimoluxe.png" className='' alt="" />
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-700 to-emerald-900 p-[2px] shadow-lg">
+                <div className="w-full h-full bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center">
+                  <img
+                    src="/njimoluxe.png"
+                    alt="Njimo Luxe Logo"
+                    className="w-7 h-7 object-contain"
+                  />
+                </div>
               </div>
 
               <span className="text-2xl font-serif font-extrabold text-green-400 tracking-tight">
